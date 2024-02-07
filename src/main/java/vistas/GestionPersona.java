@@ -8,7 +8,6 @@ package vistas;
 import DIU.modelo.PersonaModelo;
 import controlador.PersonaControlador;
 import java.util.ArrayList;
-import javax.swing.JDesktopPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -112,8 +111,6 @@ public class GestionPersona extends javax.swing.JInternalFrame {
                 formMouseClicked(evt);
             }
         });
-
-        lblIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/icono.jpeg"))); // NOI18N
 
         lblTitulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblTitulo.setForeground(new java.awt.Color(0, 0, 255));

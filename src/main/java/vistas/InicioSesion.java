@@ -40,8 +40,6 @@ public class InicioSesion extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/icono.jpeg"))); // NOI18N
-
         lblTitulo.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         lblTitulo.setForeground(new java.awt.Color(0, 51, 153));
         lblTitulo.setText("INICIO DE SESIÓN SISTEMA EPM");
