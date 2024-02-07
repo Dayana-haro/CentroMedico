@@ -10,7 +10,7 @@ package Vista;
  */
 public class Main {
     public static void main(String[] args) {
-        PersonaVista menu=new PersonaVista();
+        Menu menu=new Menu();
         menu.setVisible(true);
         }
 }

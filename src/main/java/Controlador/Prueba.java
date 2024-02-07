@@ -4,7 +4,6 @@
  */
 package Controlador;
 
-import Vista.Menu;
 
 /**
  *
@@ -14,7 +13,5 @@ public class Prueba {
     public static void main(String[] args) {
         Conexion conectar =new Conexion();
         conectar.conectar();
-        Menu m=new Menu();
-        m.setVisible(true);
     } 
 }
