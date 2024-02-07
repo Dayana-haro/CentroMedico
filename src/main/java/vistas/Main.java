@@ -11,10 +11,10 @@ package vistas;
  */
 public class Main {
     public static void main(String[] args) {
-       // Menu menu=new Menu();
+       //InicioSesion menu=new InicioSesion();
         //menu.setVisible(true);
-         GestionPersona gm= new GestionPersona();
-         gm.setVisible(true);
+       Menu gm= new Menu();
+        gm.setVisible(true);
     }
     
 }

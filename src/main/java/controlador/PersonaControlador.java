@@ -4,7 +4,7 @@
  */
 package controlador;
 
-import DIU.modelo.PersonaModelo;
+import modelo.PersonaModelo;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

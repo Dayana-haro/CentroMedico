@@ -5,7 +5,7 @@
 package vistas;
 
 
-import DIU.modelo.PersonaModel;
+import modelo.PersonaModel;
 import controlador.PersonaControlador;
 import controlador.PersonaController;
 import java.util.ArrayList;
