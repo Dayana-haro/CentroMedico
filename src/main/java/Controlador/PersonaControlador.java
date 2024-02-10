@@ -5,7 +5,7 @@
 package Controlador;
 
 import Modelo.PersonasModelo;
-import Controlador.ConexionBDD;
+import controlador.ConexionBDD;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
