@@ -7,7 +7,7 @@ package Controlador;
 import Modelo.PersonasModelo;
 import controlador.ConexionBDD;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
+import java.sql.PreparedStatement.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -83,7 +83,7 @@ public class PersonaControlador {
             ejecutar.close(); 
             return listaTotalRegistros;
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "Comuniquese con el Administrador");
+            JOptionPane.showMessageDialog(null, "COMUNICARSE CON EL ADMINISTRADOR DEL SISTEMA");
         }
         return null;
     }
