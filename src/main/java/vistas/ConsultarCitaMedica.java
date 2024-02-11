@@ -24,7 +24,7 @@ public class ConsultarCitaMedica extends javax.swing.JInternalFrame {
         initComponents();
         this.setContentPane(fondo);
         lblTipoUsuario.setIcon(MostrarLabel("/vistas/Imagenes/iconPaciente.jpg", lblTipoUsuario));
-        btnSalida.setIcon(MostrarBoton("/vistas/Imagenes/botonSalida.png", btnSalida));
+        btnRegresar.setIcon(MostrarBoton("/vistas/Imagenes/botonRegresar.png", btnRegresar));
     }
 
     /**
@@ -40,6 +40,14 @@ public class ConsultarCitaMedica extends javax.swing.JInternalFrame {
         btnRegresar = new javax.swing.JButton();
         Paciente = new javax.swing.JLabel();
         Menu = new javax.swing.JLabel();
+        NombrePaciente = new javax.swing.JLabel();
+        lblNombrePaciente = new javax.swing.JLabel();
+        Cedula = new javax.swing.JLabel();
+        lblCedula = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblConsutasCitas = new javax.swing.JTable();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tblInfoCitas = new javax.swing.JTable();
 
         btnRegresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -54,6 +62,36 @@ public class ConsultarCitaMedica extends javax.swing.JInternalFrame {
         Menu.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         Menu.setText("Menu");
 
+        NombrePaciente.setText("Nombre Paciente");
+
+        Cedula.setText("N° de Cedula");
+
+        tblConsutasCitas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(tblConsutasCitas);
+
+        tblInfoCitas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(tblInfoCitas);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -65,11 +103,24 @@ public class ConsultarCitaMedica extends javax.swing.JInternalFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(52, 52, 52)
-                                .addComponent(Menu))
+                                .addComponent(Menu)
+                                .addGap(147, 147, 147)
+                                .addComponent(lblTipoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(Paciente))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 177, Short.MAX_VALUE)
-                        .addComponent(lblTipoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(356, 356, 356))
+                        .addGap(250, 250, 250)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(NombrePaciente)
+                            .addComponent(lblNombrePaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Cedula, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblCedula, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnRegresar)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -77,16 +128,32 @@ public class ConsultarCitaMedica extends javax.swing.JInternalFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblTipoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
                         .addComponent(Menu)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Paciente)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 319, Short.MAX_VALUE)
-                .addComponent(btnRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24))
+                        .addComponent(Paciente))
+                    .addComponent(lblTipoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(NombrePaciente)
+                            .addComponent(Cedula))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lblNombrePaciente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblCedula, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(57, 57, 57)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(106, 106, 106))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(67, 67, 67)
+                        .addComponent(btnRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 26, Short.MAX_VALUE))
         );
 
         pack();
@@ -94,8 +161,8 @@ public class ConsultarCitaMedica extends javax.swing.JInternalFrame {
 
     private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
         // TODO add your handling code here:
-        menuAdministrador ventanaMA = new menuAdministrador();
-        ventanaMA.setVisible(true);
+        menuPaciente ventanaMP = new menuPaciente();
+        ventanaMP.setVisible(true);
     }//GEN-LAST:event_btnRegresarActionPerformed
 
     private Icon MostrarBoton (String url, JButton boton ){
@@ -115,9 +182,17 @@ private Icon MostrarLabel (String url, JLabel imagen ){
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Cedula;
     private javax.swing.JLabel Menu;
+    private javax.swing.JLabel NombrePaciente;
     private javax.swing.JLabel Paciente;
     private javax.swing.JButton btnRegresar;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lblCedula;
+    private javax.swing.JLabel lblNombrePaciente;
     private javax.swing.JLabel lblTipoUsuario;
+    private javax.swing.JTable tblConsutasCitas;
+    private javax.swing.JTable tblInfoCitas;
     // End of variables declaration//GEN-END:variables
 }
