@@ -42,7 +42,7 @@ public class EliminarUserMedico extends javax.swing.JInternalFrame {
         btnBuscar = new javax.swing.JLabel();
         btnEliminar = new javax.swing.JButton();
         btnRegresar = new javax.swing.JButton();
-        Consulta = new javax.swing.JLabel();
+        eliminar = new javax.swing.JLabel();
         lblTipoUsuario = new javax.swing.JLabel();
 
         setClosable(true);
@@ -84,8 +84,8 @@ public class EliminarUserMedico extends javax.swing.JInternalFrame {
             }
         });
 
-        Consulta.setFont(new java.awt.Font("Trebuchet MS", 1, 36)); // NOI18N
-        Consulta.setText("Eliminar");
+        eliminar.setFont(new java.awt.Font("Trebuchet MS", 1, 36)); // NOI18N
+        eliminar.setText("Eliminar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -99,7 +99,7 @@ public class EliminarUserMedico extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(105, 105, 105)
-                        .addComponent(Consulta))
+                        .addComponent(eliminar))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(44, 44, 44)
                         .addComponent(btnRegresar))
@@ -127,7 +127,7 @@ public class EliminarUserMedico extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(Consulta)
+                        .addComponent(eliminar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(Medica))
                     .addComponent(lblTipoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -175,11 +175,11 @@ private Icon MostrarBoton (String url, JButton boton ){
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Consulta;
     private javax.swing.JLabel Medica;
     private javax.swing.JLabel btnBuscar;
     private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnRegresar;
+    private javax.swing.JLabel eliminar;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JLabel lblTipoUsuario;
     private javax.swing.JTable tblInformacionMedico;
