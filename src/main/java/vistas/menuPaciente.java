@@ -4,17 +4,31 @@
  */
 package vistas;
 
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+
 /**
  *
  * @author USUARIO
  */
 public class menuPaciente extends javax.swing.JInternalFrame {
+    FondoPanel fondo = new FondoPanel();
 
     /**
      * Creates new form menuPaciente
      */
     public menuPaciente() {
         initComponents();
+        this.setContentPane(fondo);
+        lblTipoUsuario.setIcon(MostrarLabel("/vistas/Imagenes/iconPaciente.jpg", lblTipoUsuario));
+        btnSalida.setIcon(MostrarBoton("/vistas/Imagenes/botonSalida.png", btnSalida));
+        btnAgendarCita.setIcon(MostrarBoton("/vistas/Imagenes/botonAgendarCita.png", btnAgendarCita));
+        btnConsultarCitaMedica.setIcon(MostrarBoton("/vistas/Imagenes/botonBuscar.png", btnConsultarCitaMedica));
+        btnReagendarCitaMedica.setIcon(MostrarBoton("/vistas/Imagenes/botonReagendarCita.jpg", btnReagendarCitaMedica));
+        btnEliminarCitaMedica.setIcon(MostrarBoton("/vistas/Imagenes/botonCancelarCita.png", btnEliminarCitaMedica));
     }
 
     /**
@@ -26,21 +40,198 @@ public class menuPaciente extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnConsultarCitaMedica = new javax.swing.JButton();
+        btnReagendarCitaMedica = new javax.swing.JButton();
+        lblTipoUsuario = new javax.swing.JLabel();
+        Menu = new javax.swing.JLabel();
+        btnEliminarCitaMedica = new javax.swing.JButton();
+        FotoUsuario = new javax.swing.JLabel();
+        btnSalida = new javax.swing.JButton();
+        btnAgendarCita = new javax.swing.JButton();
+        Paciente = new javax.swing.JLabel();
+        lblInfoPaciente = new javax.swing.JLabel();
+
+        btnConsultarCitaMedica.setBackground(new java.awt.Color(255, 153, 0));
+        btnConsultarCitaMedica.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnConsultarCitaMedica.setForeground(new java.awt.Color(255, 255, 255));
+        btnConsultarCitaMedica.setText("Consultar Cita Medica");
+        btnConsultarCitaMedica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsultarCitaMedicaActionPerformed(evt);
+            }
+        });
+
+        btnReagendarCitaMedica.setBackground(new java.awt.Color(255, 255, 0));
+        btnReagendarCitaMedica.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnReagendarCitaMedica.setForeground(new java.awt.Color(255, 255, 255));
+        btnReagendarCitaMedica.setText("Reagendar Cita Medica");
+        btnReagendarCitaMedica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReagendarCitaMedicaActionPerformed(evt);
+            }
+        });
+
+        Menu.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        Menu.setText("Menu");
+
+        btnEliminarCitaMedica.setBackground(new java.awt.Color(255, 0, 0));
+        btnEliminarCitaMedica.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnEliminarCitaMedica.setForeground(new java.awt.Color(255, 255, 255));
+        btnEliminarCitaMedica.setText("Eliminar Cita medica");
+        btnEliminarCitaMedica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarCitaMedicaActionPerformed(evt);
+            }
+        });
+
+        btnSalida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalidaActionPerformed(evt);
+            }
+        });
+
+        btnAgendarCita.setBackground(new java.awt.Color(0, 204, 153));
+        btnAgendarCita.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnAgendarCita.setForeground(new java.awt.Color(255, 255, 255));
+        btnAgendarCita.setText("Agendar Cita Medica");
+        btnAgendarCita.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgendarCitaActionPerformed(evt);
+            }
+        });
+
+        Paciente.setFont(new java.awt.Font("Trebuchet MS", 1, 36)); // NOI18N
+        Paciente.setForeground(new java.awt.Color(0, 204, 204));
+        Paciente.setText("Paciente");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 718, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnAgendarCita, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnConsultarCitaMedica, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnReagendarCitaMedica, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnEliminarCitaMedica, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(121, 121, 121)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblInfoPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(FotoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(113, 113, 113)
+                                .addComponent(Menu))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(61, 61, 61)
+                                .addComponent(Paciente)))
+                        .addGap(155, 155, 155)
+                        .addComponent(lblTipoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 395, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblTipoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(Menu)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(Paciente)
+                        .addGap(6, 6, 6)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(FotoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(51, 51, 51)
+                        .addComponent(lblInfoPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(1, 1, 1)
+                        .addComponent(btnSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(15, 15, 15))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnAgendarCita, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnConsultarCitaMedica, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnEliminarCitaMedica, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnReagendarCitaMedica, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(46, Short.MAX_VALUE))))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnConsultarCitaMedicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarCitaMedicaActionPerformed
+        // TODO add your handling code here:
+        ConsultarCitaMedica ventanaCC = new ConsultarCitaMedica();
+        ventanaCC.setVisible(true);
+    }//GEN-LAST:event_btnConsultarCitaMedicaActionPerformed
+
+    private void btnReagendarCitaMedicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReagendarCitaMedicaActionPerformed
+        // TODO add your handling code here:
+        ReagendarCitaMedica ventanaRC = new ReagendarCitaMedica();
+        ventanaRC.setVisible(true);
+    }//GEN-LAST:event_btnReagendarCitaMedicaActionPerformed
+
+    private void btnEliminarCitaMedicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarCitaMedicaActionPerformed
+        // TODO add your handling code here:
+        CancelarCitaMedica ventanaEC = new CancelarCitaMedica();
+        ventanaEC.setVisible(true);
+    }//GEN-LAST:event_btnEliminarCitaMedicaActionPerformed
+
+    private void btnSalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalidaActionPerformed
+        // TODO add your handling code here:
+        Inicio ventanaI = new Inicio();
+        ventanaI.setVisible(true);
+    }//GEN-LAST:event_btnSalidaActionPerformed
+
+    private void btnAgendarCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgendarCitaActionPerformed
+        // TODO add your handling code here:
+        AgendarCitaMedica ventanaAC = new AgendarCitaMedica();
+        ventanaAC.setVisible(true);
+    }//GEN-LAST:event_btnAgendarCitaActionPerformed
+
+    private Icon MostrarBoton (String url, JButton boton ){
+     ImageIcon icono = new ImageIcon(getClass().getResource(url));
+     int ancho = boton.getWidth();
+     int alto = boton.getHeight();
+     ImageIcon icon = new ImageIcon(icono.getImage().getScaledInstance(ancho, alto, Image.SCALE_DEFAULT));
+    return icono;
+    }
+
+private Icon MostrarLabel (String url, JLabel imagen ){
+     ImageIcon icono = new ImageIcon(getClass().getResource(url));
+     int ancho = imagen.getWidth();
+     int alto = imagen.getHeight();
+     ImageIcon icon = new ImageIcon(icono.getImage().getScaledInstance(ancho, alto, Image.SCALE_DEFAULT));
+    return icono;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel FotoUsuario;
+    private javax.swing.JLabel Menu;
+    private javax.swing.JLabel Paciente;
+    private javax.swing.JButton btnAgendarCita;
+    private javax.swing.JButton btnConsultarCitaMedica;
+    private javax.swing.JButton btnEliminarCitaMedica;
+    private javax.swing.JButton btnReagendarCitaMedica;
+    private javax.swing.JButton btnSalida;
+    private javax.swing.JLabel lblInfoPaciente;
+    private javax.swing.JLabel lblTipoUsuario;
     // End of variables declaration//GEN-END:variables
 }
