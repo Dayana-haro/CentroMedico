@@ -4,17 +4,26 @@
  */
 package vistas;
 
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
 /**
  *
  * @author USUARIO
  */
 public class ConsultarPaciente extends javax.swing.JInternalFrame {
+    
+    FondoPanel fondo = new FondoPanel();
 
     /**
      * Creates new form ConsultarPaciente
      */
     public ConsultarPaciente() {
         initComponents();
+        this.setContentPane(fondo);
+        lblTipoUsuario.setIcon(MostrarLabel("/vistas.Imagenes/iconMedico.jpg", lblTipoUsuario));
     }
 
     /**
@@ -26,21 +35,36 @@ public class ConsultarPaciente extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lblTipoUsuario = new javax.swing.JLabel();
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 394, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(342, Short.MAX_VALUE)
+                .addComponent(lblTipoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(310, 310, 310))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 274, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblTipoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(402, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-
+private Icon MostrarLabel (String url, JLabel imagen ){
+     ImageIcon icono = new ImageIcon(getClass().getResource(url));
+     int ancho = imagen.getWidth();
+     int alto = imagen.getHeight();
+     ImageIcon icon = new ImageIcon(icono.getImage().getScaledInstance(ancho, alto, Image.SCALE_DEFAULT));
+    return icono;
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel lblTipoUsuario;
     // End of variables declaration//GEN-END:variables
 }

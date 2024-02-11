@@ -36,15 +36,14 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel1" min="-2" pref="151" max="-2" attributes="0"/>
-                                  <Component id="lblUsuario" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblIconoMedico" min="-2" pref="151" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblUsuario" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                       </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="341" max="-2" attributes="0"/>
-                      <Component id="lblInit" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="328" max="-2" attributes="0"/>
@@ -58,6 +57,10 @@
                       <EmptySpace min="-2" pref="333" max="-2" attributes="0"/>
                       <Component id="btnaAcceder" min="-2" pref="95" max="-2" attributes="0"/>
                   </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="356" max="-2" attributes="0"/>
+                      <Component id="lblInit" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace pref="263" max="32767" attributes="0"/>
           </Group>
@@ -66,10 +69,12 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <Component id="jLabel1" min="-2" pref="97" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+              <Component id="lblIconoMedico" min="-2" pref="97" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
               <Component id="lblInit" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="35" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="18" max="32767" attributes="0"/>
               <Component id="lblUsuario" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="txtUsuario" min="-2" max="-2" attributes="0"/>
@@ -124,7 +129,7 @@
         <Property name="text" type="java.lang.String" value="Contrase&#xf1;a: "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="lblIconoMedico">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/vistas/Imagenes/iconMedico.jpg"/>
@@ -140,9 +145,9 @@
     <Component class="javax.swing.JLabel" name="lblInit">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Trebuchet MS" size="14" style="1"/>
+          <Font name="Trebuchet MS" size="24" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Iniciar Sesion"/>
+        <Property name="text" type="java.lang.String" value="Iniciar"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnaAcceder">
@@ -164,6 +169,17 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnaAccederActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Trebuchet MS" size="36" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="99" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Sesion"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

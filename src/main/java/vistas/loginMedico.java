@@ -4,6 +4,12 @@
  */
 package vistas;
 
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+
 /**
  *
  * @author USUARIO
@@ -17,7 +23,7 @@ public class loginMedico extends javax.swing.JInternalFrame {
     public loginMedico() {
         initComponents();
         this.setContentPane(fondo);
-        
+        lblIconoMedico.setIcon(MostrarLabel("/vistas/Imagenes/iconMedico.jpg", lblIconoMedico));
         
     }
 
@@ -35,9 +41,10 @@ public class loginMedico extends javax.swing.JInternalFrame {
         tbnRecupararC = new javax.swing.JButton();
         lblUsuario = new javax.swing.JLabel();
         lblClave = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        lblIconoMedico = new javax.swing.JLabel();
         lblInit = new javax.swing.JLabel();
         btnaAcceder = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setClosable(true);
         setIconifiable(true);
@@ -61,12 +68,12 @@ public class loginMedico extends javax.swing.JInternalFrame {
         lblClave.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         lblClave.setText("Contraseña: ");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vistas/Imagenes/iconMedico.jpg"))); // NOI18N
-        jLabel1.setMaximumSize(new java.awt.Dimension(100, 100));
-        jLabel1.setMinimumSize(new java.awt.Dimension(100, 100));
+        lblIconoMedico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vistas/Imagenes/iconMedico.jpg"))); // NOI18N
+        lblIconoMedico.setMaximumSize(new java.awt.Dimension(100, 100));
+        lblIconoMedico.setMinimumSize(new java.awt.Dimension(100, 100));
 
-        lblInit.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        lblInit.setText("Iniciar Sesion");
+        lblInit.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        lblInit.setText("Iniciar");
 
         btnaAcceder.setBackground(new java.awt.Color(51, 255, 51));
         btnaAcceder.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
@@ -78,6 +85,10 @@ public class loginMedico extends javax.swing.JInternalFrame {
                 btnaAccederActionPerformed(evt);
             }
         });
+
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 153, 0));
+        jLabel1.setText("Sesion");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -93,11 +104,10 @@ public class loginMedico extends javax.swing.JInternalFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(74, 74, 74)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblUsuario)))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(341, 341, 341)
-                        .addComponent(lblInit))
+                                    .addComponent(lblIconoMedico, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabel1)
+                                        .addComponent(lblUsuario))))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(328, 328, 328)
                         .addComponent(lblClave))
@@ -106,16 +116,21 @@ public class loginMedico extends javax.swing.JInternalFrame {
                         .addComponent(tbnRecupararC))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(333, 333, 333)
-                        .addComponent(btnaAcceder, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnaAcceder, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(356, 356, 356)
+                        .addComponent(lblInit)))
                 .addContainerGap(263, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55)
+                .addComponent(lblIconoMedico, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
                 .addComponent(lblInit)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addComponent(lblUsuario)
                 .addGap(18, 18, 18)
                 .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -135,7 +150,8 @@ public class loginMedico extends javax.swing.JInternalFrame {
 
     private void btnaAccederActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaAccederActionPerformed
         // TODO add your handling code here:
-        
+        menuMedico ventanaMM = new menuMedico();
+        ventanaMM.setVisible(true);
     }//GEN-LAST:event_btnaAccederActionPerformed
 
     private void tbnRecupararCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tbnRecupararCActionPerformed
@@ -143,12 +159,19 @@ public class loginMedico extends javax.swing.JInternalFrame {
         
     }//GEN-LAST:event_tbnRecupararCActionPerformed
 
-    
+   private Icon MostrarLabel (String url, JLabel imagen ){
+     ImageIcon icono = new ImageIcon(getClass().getResource(url));
+     int ancho = imagen.getWidth();
+     int alto = imagen.getHeight();
+     ImageIcon icon = new ImageIcon(icono.getImage().getScaledInstance(ancho, alto, Image.SCALE_DEFAULT));
+    return icono;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnaAcceder;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblClave;
+    private javax.swing.JLabel lblIconoMedico;
     private javax.swing.JLabel lblInit;
     private javax.swing.JLabel lblUsuario;
     private javax.swing.JButton tbnRecupararC;

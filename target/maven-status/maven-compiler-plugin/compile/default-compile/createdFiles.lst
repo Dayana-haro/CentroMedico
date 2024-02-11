@@ -1,3 +1,4 @@
+vistas\menuMedico$2.class
 vistas\GestionPersona$8.class
 vistas\PersonaView$12.class
 vistas\GestionPersona$5.class
@@ -10,7 +11,9 @@ DIU\modelo\PersonaModel.class
 vistas\VistaPersona$4.class
 vistas\VistaPersona$7.class
 DIU\modelo\PersonaModelo.class
+vistas\Inicio$2.class
 vistas\Inicio.class
+vistas\menuMedico.class
 vistas\GestionPersona$9.class
 vistas\VistaPersona$3.class
 vistas\VistaPersona$10.class
@@ -18,9 +21,13 @@ vistas\FondoPanel.class
 vistas\PersonaView$5.class
 vistas\GestionPersona$11.class
 vistas\PersonaView$8.class
+vistas\ConsultarCitasMedicas.class
 vistas\VistaPersona$6.class
 vistas\InicioSesion$1.class
 vistas\PersonaView$1.class
+vistas\menuMedico$1.class
+vistas\menuMedico$4.class
+vistas\Inicio$1.class
 vistas\GestionPersona$2.class
 vistas\PersonaView$11.class
 vistas\VistaPersona$9.class
@@ -28,6 +35,7 @@ vistas\GestionPersona$3.class
 vistas\GestionPersona$10.class
 vistas\InicioSesion.class
 vistas\VistaPersona$2.class
+vistas\loginMedico$1.class
 vistas\InicioSesion$2.class
 vistas\GestionPersona.class
 vistas\Menu$2.class
@@ -42,13 +50,17 @@ vistas\VistaPersona.class
 vistas\loginMedico.class
 vistas\InicioSesion$3.class
 vistas\PersonaView$3.class
+vistas\ConsultaMedica.class
+vistas\loginMedico$2.class
 Controlador\PersonaController.class
 vistas\GestionPersona$4.class
 vistas\VistaPersona$5.class
 vistas\Menu$1.class
+vistas\menuMedico$3.class
 Controlador\PersonaControlador.class
 vistas\VistaPersona$1.class
 vistas\Persona.class
+vistas\ConsultarPaciente.class
 vistas\PersonaView$6.class
 vistas\GestionPersona$12.class
 vistas\GestionPersona$7.class

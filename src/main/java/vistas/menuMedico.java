@@ -15,11 +15,16 @@ import javax.swing.JLabel;
  * @author USUARIO
  */
 public class menuMedico extends javax.swing.JInternalFrame {
+    
+    FondoPanel fondo = new FondoPanel();
+    
 
     /**
      * Creates new form menuMedico
      */
     public menuMedico() {
+        
+        this.setContentPane(fondo);
         initComponents();
         lblTipoUsuario.setIcon(MostrarLabel("/vistas.Imagenes/iconMedico.jpg", lblTipoUsuario));
         btnConsultaMedica.setIcon(MostrarBoton("/vistas.Imagenes/botonConsultaMedica.jpg",btnConsultaMedica));
