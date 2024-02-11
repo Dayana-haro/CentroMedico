@@ -59,7 +59,7 @@ public class AgregarUserMedico extends javax.swing.JInternalFrame {
         txtCorreoElectronico = new javax.swing.JTextField();
         txtFechaN = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txtEspecialidadMedica = new javax.swing.JTextArea();
         cBoxMasculino = new javax.swing.JCheckBox();
         cBoxFemenino = new javax.swing.JCheckBox();
         txtFechaContratacion = new javax.swing.JTextField();
@@ -130,9 +130,9 @@ public class AgregarUserMedico extends javax.swing.JInternalFrame {
 
         cBoxSangre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        txtEspecialidadMedica.setColumns(20);
+        txtEspecialidadMedica.setRows(5);
+        jScrollPane1.setViewportView(txtEspecialidadMedica);
 
         cBoxMasculino.setText("Masculino");
 
@@ -348,12 +348,12 @@ private Icon MostrarBoton (String url, JButton boton ){
     private javax.swing.JLabel eliminar;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lblTipoUsuario;
     private javax.swing.JTextField txtCedula;
     private javax.swing.JTextField txtCelular;
     private javax.swing.JTextField txtCorreoElectronico;
     private javax.swing.JTextField txtDireccion;
+    private javax.swing.JTextArea txtEspecialidadMedica;
     private javax.swing.JTextField txtFechaContratacion;
     private javax.swing.JTextField txtFechaN;
     private javax.swing.JTextField txtNombre;
