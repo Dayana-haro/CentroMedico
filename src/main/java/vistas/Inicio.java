@@ -48,6 +48,7 @@ public class Inicio extends javax.swing.JInternalFrame {
         lblLogoSistem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vistas/Imagenes/nombreSistem.png"))); // NOI18N
 
         btnUserP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vistas/Imagenes/iconPaciente.jpg"))); // NOI18N
+        btnUserP.setBorder(null);
         btnUserP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUserPActionPerformed(evt);
@@ -55,6 +56,7 @@ public class Inicio extends javax.swing.JInternalFrame {
         });
 
         btnUserM.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vistas/Imagenes/iconMedico.jpg"))); // NOI18N
+        btnUserM.setBorder(null);
         btnUserM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUserMActionPerformed(evt);
@@ -86,7 +88,7 @@ public class Inicio extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnUserP)
                     .addComponent(btnUserM))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         pack();

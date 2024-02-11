@@ -6,8 +6,10 @@ package vistas;
 
 import java.awt.Image;
 import java.awt.Graphics;
+import javax.swing.Icon;
 import javax.swing.JPanel;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 
 /**
  *
@@ -24,6 +26,8 @@ public class FondoPanel extends JPanel{
         
         super.paint(g);
     }
+
+    
 
     
 }
