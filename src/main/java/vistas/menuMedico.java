@@ -21,10 +21,12 @@ public class menuMedico extends javax.swing.JInternalFrame {
      */
     public menuMedico() {
         initComponents();
+        lblTipoUsuario.setIcon(MostrarLabel("/vistas.Imagenes/iconMedico.jpg", lblTipoUsuario));
         btnConsultaMedica.setIcon(MostrarBoton("/vistas.Imagenes/botonConsultaMedica.jpg",btnConsultaMedica));
         btnCPaciente.setIcon(MostrarBoton("/vistas.Imagenes/botonConsultarPaciente.png", btnCPaciente));
         btnCitasMedicas.setIcon(MostrarBoton("/vistas.Imagenes/botonBuscar.png", btnCPaciente));
-                
+        FotoUsuario.setIcon(MostrarLabel("/vistas.Imagenes/medicoH.jpg", FotoUsuario));
+        btnSalida.setIcon(MostrarBoton("/vistas.Imagenes/botonSalida.jpg", btnSalida));
     }
 
     /**
@@ -45,6 +47,7 @@ public class menuMedico extends javax.swing.JInternalFrame {
         FotoUsuario = new javax.swing.JLabel();
         lblInfoUsiario = new javax.swing.JLabel();
         lblEspecialidad = new javax.swing.JLabel();
+        btnSalida = new javax.swing.JButton();
 
         btnConsultaMedica.setBackground(new java.awt.Color(204, 0, 255));
         btnConsultaMedica.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
@@ -57,7 +60,7 @@ public class menuMedico extends javax.swing.JInternalFrame {
         });
 
         btnCitasMedicas.setBackground(new java.awt.Color(51, 255, 0));
-        btnCitasMedicas.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        btnCitasMedicas.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btnCitasMedicas.setForeground(new java.awt.Color(255, 255, 255));
         btnCitasMedicas.setText("Consultar Citas Medicas");
         btnCitasMedicas.addActionListener(new java.awt.event.ActionListener() {
@@ -82,6 +85,12 @@ public class menuMedico extends javax.swing.JInternalFrame {
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 153, 0));
         jLabel2.setText("Personal Medico");
+
+        btnSalida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalidaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -111,10 +120,15 @@ public class menuMedico extends javax.swing.JInternalFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnCPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lblInfoUsiario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblEspecialidad, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
-                        .addGap(37, 37, 37))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblInfoUsiario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(37, 37, 37))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblEspecialidad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnSalida)
+                                .addGap(25, 25, 25))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -135,16 +149,22 @@ public class menuMedico extends javax.swing.JInternalFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(70, 70, 70)
                         .addComponent(FotoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnCPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnCPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(23, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lblInfoUsiario, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(lblEspecialidad, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(23, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(49, 49, 49)
+                                .addComponent(lblEspecialidad, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(btnSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(42, Short.MAX_VALUE))))
         );
 
         pack();
@@ -152,15 +172,27 @@ public class menuMedico extends javax.swing.JInternalFrame {
 
     private void btnCitasMedicasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCitasMedicasActionPerformed
         // TODO add your handling code here:
+        ConsultarCitasMedicas ventanaCCM = new ConsultarCitasMedicas();
+        ventanaCCM.setVisible(true);
     }//GEN-LAST:event_btnCitasMedicasActionPerformed
 
     private void btnConsultaMedicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultaMedicaActionPerformed
         // TODO add your handling code here:
+        ConsultaMedica ventanaCM = new ConsultaMedica();
+        ventanaCM.setVisible(true);
     }//GEN-LAST:event_btnConsultaMedicaActionPerformed
 
     private void btnCPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCPacienteActionPerformed
         // TODO add your handling code here:
+        ConsultarPaciente ventanaCP = new ConsultarPaciente();
+        ventanaCP.setVisible(true);
     }//GEN-LAST:event_btnCPacienteActionPerformed
+
+    private void btnSalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalidaActionPerformed
+        // TODO add your handling code here:
+        Inicio ventanaI = new Inicio();
+        ventanaI.setVisible(true);
+    }//GEN-LAST:event_btnSalidaActionPerformed
  
     
 
@@ -169,6 +201,7 @@ public class menuMedico extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnCPaciente;
     private javax.swing.JButton btnCitasMedicas;
     private javax.swing.JButton btnConsultaMedica;
+    private javax.swing.JButton btnSalida;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblEspecialidad;
@@ -176,7 +209,7 @@ public class menuMedico extends javax.swing.JInternalFrame {
     private javax.swing.JLabel lblTipoUsuario;
     // End of variables declaration//GEN-END:variables
 
-    public Icon MostrarBoton (String url, JButton boton ){
+    private Icon MostrarBoton (String url, JButton boton ){
      ImageIcon icono = new ImageIcon(getClass().getResource(url));
      int ancho = boton.getWidth();
      int alto = boton.getHeight();
@@ -184,7 +217,7 @@ public class menuMedico extends javax.swing.JInternalFrame {
     return icono;
     }
     
-    public Icon MostrarLabel (String url, JLabel imagen ){
+    private Icon MostrarLabel (String url, JLabel imagen ){
      ImageIcon icono = new ImageIcon(getClass().getResource(url));
      int ancho = imagen.getWidth();
      int alto = imagen.getHeight();
