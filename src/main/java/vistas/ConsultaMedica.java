@@ -238,6 +238,8 @@ public class ConsultaMedica extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnGuardarActionPerformed
 
+    
+    //No Borrar
 private Icon MostrarLabel (String url, JLabel imagen ){
      ImageIcon icono = new ImageIcon(getClass().getResource(url));
      int ancho = imagen.getWidth();
