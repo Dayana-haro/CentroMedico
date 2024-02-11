@@ -32,7 +32,7 @@ public class menuMedico extends javax.swing.JInternalFrame {
         btnCitasMedicas.setIcon(MostrarBoton("/vistas/Imagenes/botonBuscar.png", btnCPaciente));
         FotoUsuario.setIcon(MostrarLabel("/vistas/Imagenes/medicoH.jpg", FotoUsuario));
         btnSalida.setIcon(MostrarBoton("/vistas/Imagenes/botonSalida.jpg", btnSalida));
-        btnRegresar.setIcon(MostrarBoton("/vistas.Imagenes/botonBuscar.png", btnRegresar));
+        btnRegresar.setIcon(MostrarBoton("/vistas.Imagenes/botonRegresar.png", btnRegresar));
     }
 
     /**
@@ -139,13 +139,13 @@ public class menuMedico extends javax.swing.JInternalFrame {
                                 .addGap(37, 37, 37))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(lblEspecialidad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnSalida)
-                                .addGap(25, 25, 25))))))
+                                .addGap(115, 115, 115))))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addComponent(btnRegresar)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnSalida)
+                .addGap(25, 25, 25))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -166,24 +166,23 @@ public class menuMedico extends javax.swing.JInternalFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(70, 70, 70)
                         .addComponent(FotoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lblInfoUsiario, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(49, 49, 49)
-                                .addComponent(lblEspecialidad, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(btnSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(111, Short.MAX_VALUE))
+                                .addComponent(lblEspecialidad, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnCPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                        .addComponent(btnRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(20, 20, 20))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(20, 20, 20))
         );
 
         pack();

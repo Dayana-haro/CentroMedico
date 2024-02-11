@@ -24,8 +24,8 @@ public class ConsultarPaciente extends javax.swing.JInternalFrame {
     public ConsultarPaciente() {
         initComponents();
         this.setContentPane(fondo);
-        lblTipoUsuario.setIcon(MostrarLabel("/vistas.Imagenes/iconMedico.jpg", lblTipoUsuario));
-        btnRegresar.setIcon(MostrarBoton("/vistas.Imagenes/botonBuscar.png", btnRegresar));
+        lblTipoUsuario.setIcon(MostrarLabel("/vistas/Imagenes/iconMedico.jpg", lblTipoUsuario));
+        btnRegresar.setIcon(MostrarBoton("/vistas/Imagenes/botonRegresar.png", btnRegresar));
     }
 
     /**

@@ -25,7 +25,7 @@ public class ConsultaMedica extends javax.swing.JInternalFrame {
         initComponents();
         this.setContentPane(fondo);
         lblTipoUsuario.setIcon(MostrarLabel("/vistas.Imagenes/iconMedico.jpg", lblTipoUsuario));
-        btnRegresar.setIcon(MostrarBoton("/vistas.Imagenes/botonBuscar.png", btnRegresar));
+        btnRegresar.setIcon(MostrarBoton("/vistas.Imagenes/botonRegresar.png", btnRegresar));
     }
 
     /**

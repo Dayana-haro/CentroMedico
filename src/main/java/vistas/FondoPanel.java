@@ -10,6 +10,7 @@ import javax.swing.Icon;
 import javax.swing.JPanel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 
 /**
  *
@@ -26,8 +27,8 @@ public class FondoPanel extends JPanel{
         
         super.paint(g);
     }
-
     
-
+  
+    
     
 }
