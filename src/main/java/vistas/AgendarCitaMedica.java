@@ -4,17 +4,27 @@
  */
 package vistas;
 
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+
 /**
  *
  * @author USUARIO
  */
 public class AgendarCitaMedica extends javax.swing.JInternalFrame {
+    FondoPanel fondo = new FondoPanel();
 
     /**
      * Creates new form AgendarCitaMedica
      */
     public AgendarCitaMedica() {
         initComponents();
+        this.setContentPane(fondo);
+        lblTipoUsuario.setIcon(MostrarLabel("/vistas/Imagenes/iconPaciente.jpg", lblTipoUsuario));
+        btnRegresar.setIcon(MostrarBoton("/vistas/Imagenes/botonRegresar.png", btnRegresar));
     }
 
     /**
@@ -26,21 +36,186 @@ public class AgendarCitaMedica extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lblTipoUsuario = new javax.swing.JLabel();
+        btnRegresar = new javax.swing.JButton();
+        btnAgendar = new javax.swing.JButton();
+        Paciente = new javax.swing.JLabel();
+        Menu = new javax.swing.JLabel();
+        EspecialidadMedica = new javax.swing.JLabel();
+        cBoxEspecialidad = new javax.swing.JComboBox<>();
+        NombrePaciente = new javax.swing.JLabel();
+        lblNombrePaciente = new javax.swing.JLabel();
+        Cedula = new javax.swing.JLabel();
+        lblCedula = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+
+        btnRegresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegresarActionPerformed(evt);
+            }
+        });
+
+        btnAgendar.setBackground(new java.awt.Color(51, 51, 255));
+        btnAgendar.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        btnAgendar.setForeground(new java.awt.Color(255, 255, 255));
+        btnAgendar.setText("Agendar");
+        btnAgendar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgendarActionPerformed(evt);
+            }
+        });
+
+        Paciente.setFont(new java.awt.Font("Trebuchet MS", 1, 36)); // NOI18N
+        Paciente.setForeground(new java.awt.Color(0, 204, 204));
+        Paciente.setText("Paciente");
+
+        Menu.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        Menu.setText("Agendar Cita");
+
+        EspecialidadMedica.setText("Especialidad Medica");
+
+        cBoxEspecialidad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        NombrePaciente.setText("Nombre Paciente");
+
+        Cedula.setText("N° de Cedula");
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 394, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(btnRegresar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnAgendar)
+                            .addComponent(Menu)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(63, 63, 63)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(EspecialidadMedica)
+                            .addComponent(Paciente)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(78, 78, 78)
+                        .addComponent(cBoxEspecialidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblTipoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(128, 128, 128)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(NombrePaciente)
+                            .addComponent(lblNombrePaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Cedula, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblCedula, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 152, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 274, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(Menu)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Paciente))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(NombrePaciente)
+                                    .addComponent(Cedula))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(lblNombrePaciente, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE)
+                                    .addComponent(lblCedula, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(lblTipoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(EspecialidadMedica)
+                        .addGap(29, 29, 29)
+                        .addComponent(cBoxEspecialidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnAgendar)
+                        .addGap(85, 85, 85)
+                        .addComponent(btnRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(33, 33, 33))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
+        // TODO add your handling code here:
+        menuPaciente ventanaMP = new menuPaciente();
+        ventanaMP.setVisible(true);
+    }//GEN-LAST:event_btnRegresarActionPerformed
+
+    private void btnAgendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgendarActionPerformed
+        // TODO add your handling code here:
+        menuPaciente ventanaMP = new menuPaciente();
+        ventanaMP.setVisible(true);
+    }//GEN-LAST:event_btnAgendarActionPerformed
+
+    private Icon MostrarBoton (String url, JButton boton ){
+     ImageIcon icono = new ImageIcon(getClass().getResource(url));
+     int ancho = boton.getWidth();
+     int alto = boton.getHeight();
+     ImageIcon icon = new ImageIcon(icono.getImage().getScaledInstance(ancho, alto, Image.SCALE_DEFAULT));
+    return icono;
+    }
+
+private Icon MostrarLabel (String url, JLabel imagen ){
+     ImageIcon icono = new ImageIcon(getClass().getResource(url));
+     int ancho = imagen.getWidth();
+     int alto = imagen.getHeight();
+     ImageIcon icon = new ImageIcon(icono.getImage().getScaledInstance(ancho, alto, Image.SCALE_DEFAULT));
+    return icono;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Cedula;
+    private javax.swing.JLabel EspecialidadMedica;
+    private javax.swing.JLabel Menu;
+    private javax.swing.JLabel NombrePaciente;
+    private javax.swing.JLabel Paciente;
+    private javax.swing.JButton btnAgendar;
+    private javax.swing.JButton btnRegresar;
+    private javax.swing.JComboBox<String> cBoxEspecialidad;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JLabel lblCedula;
+    private javax.swing.JLabel lblNombrePaciente;
+    private javax.swing.JLabel lblTipoUsuario;
     // End of variables declaration//GEN-END:variables
 }
