@@ -40,7 +40,7 @@ public class EliminarUserMedico extends javax.swing.JInternalFrame {
         Medica = new javax.swing.JLabel();
         txtBuscar = new javax.swing.JTextField();
         btnBuscar = new javax.swing.JLabel();
-        btnGuardar = new javax.swing.JButton();
+        btnEliminar = new javax.swing.JButton();
         btnRegresar = new javax.swing.JButton();
         Consulta = new javax.swing.JLabel();
         lblTipoUsuario = new javax.swing.JLabel();
@@ -68,13 +68,13 @@ public class EliminarUserMedico extends javax.swing.JInternalFrame {
         Medica.setForeground(new java.awt.Color(204, 0, 255));
         Medica.setText("Personal Medico");
 
-        btnGuardar.setBackground(new java.awt.Color(255, 0, 0));
-        btnGuardar.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        btnGuardar.setForeground(new java.awt.Color(255, 255, 255));
-        btnGuardar.setText("Eliminar");
-        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+        btnEliminar.setBackground(new java.awt.Color(255, 0, 0));
+        btnEliminar.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        btnEliminar.setForeground(new java.awt.Color(255, 255, 255));
+        btnEliminar.setText("Eliminar");
+        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGuardarActionPerformed(evt);
+                btnEliminarActionPerformed(evt);
             }
         });
 
@@ -93,7 +93,7 @@ public class EliminarUserMedico extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnGuardar)
+                .addComponent(btnEliminar)
                 .addGap(167, 167, 167))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -139,7 +139,7 @@ public class EliminarUserMedico extends javax.swing.JInternalFrame {
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnGuardar, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnEliminar, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btnRegresar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(33, 33, 33))
         );
@@ -147,9 +147,9 @@ public class EliminarUserMedico extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnGuardarActionPerformed
+    }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
         // TODO add your handling code here:
@@ -178,7 +178,7 @@ private Icon MostrarBoton (String url, JButton boton ){
     private javax.swing.JLabel Consulta;
     private javax.swing.JLabel Medica;
     private javax.swing.JLabel btnBuscar;
-    private javax.swing.JButton btnGuardar;
+    private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnRegresar;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JLabel lblTipoUsuario;

@@ -4,17 +4,27 @@
  */
 package vistas;
 
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+
 /**
  *
  * @author USUARIO
  */
 public class ConsultarMedicos extends javax.swing.JInternalFrame {
+    FondoPanel fondo = new FondoPanel();
 
     /**
      * Creates new form ConsultarMedicos
      */
     public ConsultarMedicos() {
         initComponents();
+        this.setContentPane(fondo);
+        lblTipoUsuario.setIcon(MostrarLabel("/vistas.Imagenes/iconAdmin.jpg", lblTipoUsuario));
+        btnRegresar.setIcon(MostrarBoton("/vistas.Imagenes/botonRegresar.png", btnRegresar));
     }
 
     /**
@@ -247,10 +257,25 @@ public class ConsultarMedicos extends javax.swing.JInternalFrame {
 
     private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
         // TODO add your handling code here:
-        menuMedico ventanaMM = new menuMedico();
-        ventanaMM.setVisible(true);
+        menuAdministrador ventanaMA = new menuAdministrador();
+        ventanaMA.setVisible(true);
     }//GEN-LAST:event_btnRegresarActionPerformed
 
+    private Icon MostrarLabel (String url, JLabel imagen ){
+     ImageIcon icono = new ImageIcon(getClass().getResource(url));
+     int ancho = imagen.getWidth();
+     int alto = imagen.getHeight();
+     ImageIcon icon = new ImageIcon(icono.getImage().getScaledInstance(ancho, alto, Image.SCALE_DEFAULT));
+    return icono;
+    }
+
+private Icon MostrarBoton (String url, JButton boton ){
+     ImageIcon icono = new ImageIcon(getClass().getResource(url));
+     int ancho = boton.getWidth();
+     int alto = boton.getHeight();
+     ImageIcon icon = new ImageIcon(icono.getImage().getScaledInstance(ancho, alto, Image.SCALE_DEFAULT));
+    return icono;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Consulta;

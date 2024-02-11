@@ -4,17 +4,27 @@
  */
 package vistas;
 
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+
 /**
  *
  * @author USUARIO
  */
 public class ModificarUserMedico extends javax.swing.JInternalFrame {
+    FondoPanel fondo = new FondoPanel();
 
     /**
      * Creates new form ModificarUserMedico
      */
     public ModificarUserMedico() {
         initComponents();
+        this.setContentPane(fondo);
+        lblTipoUsuario.setIcon(MostrarLabel("/vistas.Imagenes/iconAdmin.jpg", lblTipoUsuario));
+        btnRegresar.setIcon(MostrarBoton("/vistas.Imagenes/botonRegresar.png", btnRegresar));
     }
 
     /**
@@ -26,27 +36,26 @@ public class ModificarUserMedico extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane3 = new javax.swing.JScrollPane();
-        tblInformacionPaciente = new javax.swing.JTable();
         Medica = new javax.swing.JLabel();
         txtBuscar = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
         btnBuscar = new javax.swing.JLabel();
-        chkNoAsistedo = new javax.swing.JCheckBox();
         diagnostico = new javax.swing.JLabel();
-        chkCancelado = new javax.swing.JCheckBox();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtDiagnostico = new javax.swing.JTextArea();
-        chkReprogramado = new javax.swing.JCheckBox();
-        chkEjecutado = new javax.swing.JCheckBox();
         RecetaMedica = new javax.swing.JLabel();
-        btnGuardar = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        txtRecetaMedica = new javax.swing.JTextArea();
+        btnActualizar = new javax.swing.JButton();
         btnRegresar = new javax.swing.JButton();
         Consulta = new javax.swing.JLabel();
-        InformacionPaciente = new javax.swing.JLabel();
+        NombreMedico = new javax.swing.JLabel();
         lblTipoUsuario = new javax.swing.JLabel();
+        lblNombreMedico = new javax.swing.JLabel();
+        diagnostico1 = new javax.swing.JLabel();
+        RecetaMedica1 = new javax.swing.JLabel();
+        diagnostico2 = new javax.swing.JLabel();
+        txtCelular = new javax.swing.JTextField();
+        txtCorreoE = new javax.swing.JTextField();
+        cBoxCargo = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        txtDireccion = new javax.swing.JTextField();
 
         setClosable(true);
         setIconifiable(true);
@@ -54,65 +63,25 @@ public class ModificarUserMedico extends javax.swing.JInternalFrame {
         setResizable(true);
         setAutoscrolls(true);
 
-        tblInformacionPaciente.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane3.setViewportView(tblInformacionPaciente);
-
         Medica.setFont(new java.awt.Font("Trebuchet MS", 1, 36)); // NOI18N
-        Medica.setForeground(new java.awt.Color(51, 153, 0));
-        Medica.setText("Medica");
+        Medica.setForeground(new java.awt.Color(204, 0, 255));
+        Medica.setText("Personal Medico");
 
-        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        jLabel1.setText("Informacion de Cita Medica");
+        diagnostico.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        diagnostico.setText("N° Telefono (Celular)");
 
-        chkNoAsistedo.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        chkNoAsistedo.setForeground(new java.awt.Color(0, 51, 204));
-        chkNoAsistedo.setText("No Asistido");
+        RecetaMedica.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        RecetaMedica.setText("Especialidad");
 
-        diagnostico.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        diagnostico.setText("Diagnostico");
-
-        chkCancelado.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        chkCancelado.setForeground(new java.awt.Color(255, 0, 0));
-        chkCancelado.setText("Cancelado");
-
-        txtDiagnostico.setColumns(20);
-        txtDiagnostico.setRows(5);
-        jScrollPane1.setViewportView(txtDiagnostico);
-
-        chkReprogramado.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        chkReprogramado.setForeground(new java.awt.Color(255, 255, 51));
-        chkReprogramado.setText("Reprogramado");
-
-        chkEjecutado.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        chkEjecutado.setForeground(new java.awt.Color(102, 255, 0));
-        chkEjecutado.setText("Ejecutado");
-
-        RecetaMedica.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        RecetaMedica.setText("Receta Medica");
-
-        btnGuardar.setBackground(new java.awt.Color(0, 102, 51));
-        btnGuardar.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        btnGuardar.setForeground(new java.awt.Color(255, 255, 255));
-        btnGuardar.setText("Guardar");
-        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+        btnActualizar.setBackground(new java.awt.Color(0, 102, 51));
+        btnActualizar.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        btnActualizar.setForeground(new java.awt.Color(255, 255, 255));
+        btnActualizar.setText("Actualizar");
+        btnActualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGuardarActionPerformed(evt);
+                btnActualizarActionPerformed(evt);
             }
         });
-
-        txtRecetaMedica.setColumns(20);
-        txtRecetaMedica.setRows(5);
-        jScrollPane2.setViewportView(txtRecetaMedica);
 
         btnRegresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,70 +90,99 @@ public class ModificarUserMedico extends javax.swing.JInternalFrame {
         });
 
         Consulta.setFont(new java.awt.Font("Trebuchet MS", 1, 36)); // NOI18N
-        Consulta.setText("Consulta");
+        Consulta.setText("Modificar");
 
-        InformacionPaciente.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        InformacionPaciente.setText("Informacion de Paciente");
+        NombreMedico.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        NombreMedico.setText("Nombre del Medico");
+
+        diagnostico1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        diagnostico1.setText("CorreoElectronico");
+
+        RecetaMedica1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        RecetaMedica1.setText("Direccion ");
+
+        diagnostico2.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        diagnostico2.setText("Cargo");
+
+        cBoxCargo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnActualizar)
+                .addGap(167, 167, 167))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(RecetaMedica))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
+                                .addGap(95, 95, 95)
+                                .addComponent(Consulta)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(btnGuardar)
-                                .addGap(144, 144, 144))
+                                .addComponent(Medica)))
+                        .addGap(120, 120, 120))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(44, 44, 44)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtCelular, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnRegresar)
+                                    .addComponent(txtCorreoE, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(102, 102, 102)
+                                .addComponent(diagnostico)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(102, 102, 102)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cBoxCargo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(diagnostico1)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(diagnostico2)
+                                .addGap(271, 271, 271)))))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(18, 18, 18)
+                            .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(64, 64, 64)
+                            .addComponent(RecetaMedica))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addGap(50, 50, 50)
+                            .addComponent(RecetaMedica1)
+                            .addGap(149, 149, 149)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblTipoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(77, 77, 77)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(lblTipoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(77, 77, 77)
-                                        .addComponent(InformacionPaciente))
-                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addGap(23, 23, 23))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(105, 105, 105)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Consulta)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(Medica)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(102, 102, 102)
-                .addComponent(diagnostico)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(120, 120, 120))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnRegresar)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 364, Short.MAX_VALUE)
-                            .addComponent(jScrollPane2))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(chkReprogramado)
-                            .addComponent(chkCancelado)
-                            .addComponent(chkEjecutado)
-                            .addComponent(chkNoAsistedo))
-                        .addGap(154, 154, 154))))
+                                        .addGap(48, 48, 48)
+                                        .addComponent(NombreMedico))
+                                    .addComponent(lblNombreMedico, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(32, 32, 32)))
+                .addGap(32, 32, 32))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -194,46 +192,43 @@ public class ModificarUserMedico extends javax.swing.JInternalFrame {
                         .addGap(20, 20, 20)
                         .addComponent(Consulta)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Medica)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(InformacionPaciente)
-                                .addGap(26, 26, 26))))
+                        .addComponent(Medica))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(NombreMedico)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblNombreMedico, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(lblTipoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(81, 81, 81)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(diagnostico)
+                    .addComponent(RecetaMedica))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(70, 70, 70))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtCelular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(diagnostico1))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)))
+                        .addGap(12, 12, 12)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtCorreoE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(diagnostico2)
+                    .addComponent(RecetaMedica1))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cBoxCargo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(diagnostico)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(24, 24, 24)
-                        .addComponent(RecetaMedica)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(13, 13, 13)
-                        .addComponent(jLabel1)
-                        .addGap(44, 44, 44)
-                        .addComponent(chkNoAsistedo)
-                        .addGap(18, 18, 18)
-                        .addComponent(chkCancelado)
-                        .addGap(18, 18, 18)
-                        .addComponent(chkReprogramado)
-                        .addGap(18, 18, 18)
-                        .addComponent(chkEjecutado)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnGuardar, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnActualizar, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btnRegresar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(33, 33, 33))
         );
@@ -241,38 +236,53 @@ public class ModificarUserMedico extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+    private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnGuardarActionPerformed
+    }//GEN-LAST:event_btnActualizarActionPerformed
 
     private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
         // TODO add your handling code here:
-        menuMedico ventanaMM = new menuMedico();
-        ventanaMM.setVisible(true);
+        menuAdministrador ventanaMA = new menuAdministrador();
+        ventanaMA.setVisible(true);
     }//GEN-LAST:event_btnRegresarActionPerformed
 
 
+    private Icon MostrarLabel (String url, JLabel imagen ){
+     ImageIcon icono = new ImageIcon(getClass().getResource(url));
+     int ancho = imagen.getWidth();
+     int alto = imagen.getHeight();
+     ImageIcon icon = new ImageIcon(icono.getImage().getScaledInstance(ancho, alto, Image.SCALE_DEFAULT));
+    return icono;
+    }
+
+private Icon MostrarBoton (String url, JButton boton ){
+     ImageIcon icono = new ImageIcon(getClass().getResource(url));
+     int ancho = boton.getWidth();
+     int alto = boton.getHeight();
+     ImageIcon icon = new ImageIcon(icono.getImage().getScaledInstance(ancho, alto, Image.SCALE_DEFAULT));
+    return icono;
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Consulta;
-    private javax.swing.JLabel InformacionPaciente;
     private javax.swing.JLabel Medica;
+    private javax.swing.JLabel NombreMedico;
     private javax.swing.JLabel RecetaMedica;
+    private javax.swing.JLabel RecetaMedica1;
+    private javax.swing.JButton btnActualizar;
     private javax.swing.JLabel btnBuscar;
-    private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnRegresar;
-    private javax.swing.JCheckBox chkCancelado;
-    private javax.swing.JCheckBox chkEjecutado;
-    private javax.swing.JCheckBox chkNoAsistedo;
-    private javax.swing.JCheckBox chkReprogramado;
+    private javax.swing.JComboBox<String> cBoxCargo;
     private javax.swing.JLabel diagnostico;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel diagnostico1;
+    private javax.swing.JLabel diagnostico2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel lblNombreMedico;
     private javax.swing.JLabel lblTipoUsuario;
-    private javax.swing.JTable tblInformacionPaciente;
     private javax.swing.JTextField txtBuscar;
-    private javax.swing.JTextArea txtDiagnostico;
-    private javax.swing.JTextArea txtRecetaMedica;
+    private javax.swing.JTextField txtCelular;
+    private javax.swing.JTextField txtCorreoE;
+    private javax.swing.JTextField txtDireccion;
     // End of variables declaration//GEN-END:variables
 }
