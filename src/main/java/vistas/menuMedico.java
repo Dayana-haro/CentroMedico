@@ -26,12 +26,13 @@ public class menuMedico extends javax.swing.JInternalFrame {
         
         this.setContentPane(fondo);
         initComponents();
-        lblTipoUsuario.setIcon(MostrarLabel("/vistas.Imagenes/iconMedico.jpg", lblTipoUsuario));
-        btnConsultaMedica.setIcon(MostrarBoton("/vistas.Imagenes/botonConsultaMedica.jpg",btnConsultaMedica));
-        btnCPaciente.setIcon(MostrarBoton("/vistas.Imagenes/botonConsultarPaciente.png", btnCPaciente));
-        btnCitasMedicas.setIcon(MostrarBoton("/vistas.Imagenes/botonBuscar.png", btnCPaciente));
-        FotoUsuario.setIcon(MostrarLabel("/vistas.Imagenes/medicoH.jpg", FotoUsuario));
-        btnSalida.setIcon(MostrarBoton("/vistas.Imagenes/botonSalida.jpg", btnSalida));
+        lblTipoUsuario.setIcon(MostrarLabel("/vistas/Imagenes/iconMedico.jpg", lblTipoUsuario));
+        btnConsultaMedica.setIcon(MostrarBoton("/vistas/Imagenes/botonConsultaMedica.jpg",btnConsultaMedica));
+        btnCPaciente.setIcon(MostrarBoton("/vistas/Imagenes/botonConsultarPaciente.png", btnCPaciente));
+        btnCitasMedicas.setIcon(MostrarBoton("/vistas/Imagenes/botonBuscar.png", btnCPaciente));
+        FotoUsuario.setIcon(MostrarLabel("/vistas/Imagenes/medicoH.jpg", FotoUsuario));
+        btnSalida.setIcon(MostrarBoton("/vistas/Imagenes/botonSalida.jpg", btnSalida));
+        btnRegresar.setIcon(MostrarBoton("/vistas.Imagenes/botonBuscar.png", btnRegresar));
     }
 
     /**
@@ -53,6 +54,7 @@ public class menuMedico extends javax.swing.JInternalFrame {
         lblInfoUsiario = new javax.swing.JLabel();
         lblEspecialidad = new javax.swing.JLabel();
         btnSalida = new javax.swing.JButton();
+        btnRegresar = new javax.swing.JButton();
 
         btnConsultaMedica.setBackground(new java.awt.Color(204, 0, 255));
         btnConsultaMedica.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
@@ -97,6 +99,12 @@ public class menuMedico extends javax.swing.JInternalFrame {
             }
         });
 
+        btnRegresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegresarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -134,6 +142,10 @@ public class menuMedico extends javax.swing.JInternalFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(btnSalida)
                                 .addGap(25, 25, 25))))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(btnRegresar)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,10 +168,6 @@ public class menuMedico extends javax.swing.JInternalFrame {
                         .addComponent(FotoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnCPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(23, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lblInfoUsiario, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -169,7 +177,13 @@ public class menuMedico extends javax.swing.JInternalFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addComponent(btnSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(42, Short.MAX_VALUE))))
+                        .addContainerGap(111, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnCPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                        .addComponent(btnRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20))))
         );
 
         pack();
@@ -198,6 +212,12 @@ public class menuMedico extends javax.swing.JInternalFrame {
         Inicio ventanaI = new Inicio();
         ventanaI.setVisible(true);
     }//GEN-LAST:event_btnSalidaActionPerformed
+
+    private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
+        // TODO add your handling code here:
+        menuMedico ventanaMM = new menuMedico();
+        ventanaMM.setVisible(true);
+    }//GEN-LAST:event_btnRegresarActionPerformed
  
     
 
@@ -206,6 +226,7 @@ public class menuMedico extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnCPaciente;
     private javax.swing.JButton btnCitasMedicas;
     private javax.swing.JButton btnConsultaMedica;
+    private javax.swing.JButton btnRegresar;
     private javax.swing.JButton btnSalida;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
