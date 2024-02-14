@@ -45,9 +45,9 @@ public class Inicio extends javax.swing.JInternalFrame {
         setResizable(true);
         setAutoscrolls(true);
 
-        lblLogoSistem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vistas/Imagenes/nombreSistem.png"))); // NOI18N
+        lblLogoSistem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/nombreSistem.png"))); // NOI18N
 
-        btnUserP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vistas/Imagenes/iconPaciente.jpg"))); // NOI18N
+        btnUserP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconPaciente.jpg"))); // NOI18N
         btnUserP.setBorder(null);
         btnUserP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -55,7 +55,7 @@ public class Inicio extends javax.swing.JInternalFrame {
             }
         });
 
-        btnUserM.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vistas/Imagenes/iconMedico.jpg"))); // NOI18N
+        btnUserM.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconMedico.jpg"))); // NOI18N
         btnUserM.setBorder(null);
         btnUserM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,7 +104,6 @@ public class Inicio extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         loginMedico Medico = new loginMedico();
     }//GEN-LAST:event_btnUserMActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnUserM;

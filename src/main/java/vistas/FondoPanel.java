@@ -20,7 +20,7 @@ public class FondoPanel extends JPanel{
     private Image imagen; 
     @Override
     public void paint(Graphics g){
-        imagen = new ImageIcon(getClass().getResource("C:\\Users\\USUARIO\\Documents\\Poryecto Final Centro Medico\\PCentroMedico\\CentroMedico\\src\\main\\java\\vistas\\Imagenes\\MediMeetup.jpg")).getImage();
+        imagen = new ImageIcon(getClass().getResource("C:\\Users\\USUARIO\\Documents\\proyecto\\PCentroMedico\\CentroMedico\\src\\main\\resources\\Imagenes\\MediMeetup.jpg")).getImage();
         g.drawImage(imagen,0,0,getWidth(), getHeight(),this);
         
         setOpaque(false);

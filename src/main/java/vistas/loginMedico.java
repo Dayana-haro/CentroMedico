@@ -23,7 +23,7 @@ public class loginMedico extends javax.swing.JInternalFrame {
     public loginMedico() {
         initComponents();
         this.setContentPane(fondo);
-        lblIconoMedico.setIcon(MostrarLabel("/vistas/Imagenes/iconMedico.jpg", lblIconoMedico));
+        //lblIconoMedico.setIcon(MostrarLabel("C://Users//USUARIO//Documents//proyecto//PCentroMedico//CentroMedico//src//main//resources//Imagenes//iconMedico.png", lblIconoMedico));
         
     }
 
@@ -68,7 +68,7 @@ public class loginMedico extends javax.swing.JInternalFrame {
         lblClave.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         lblClave.setText("Contraseña: ");
 
-        lblIconoMedico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vistas/Imagenes/iconMedico.jpg"))); // NOI18N
+        lblIconoMedico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconMedico.jpg"))); // NOI18N
         lblIconoMedico.setMaximumSize(new java.awt.Dimension(100, 100));
         lblIconoMedico.setMinimumSize(new java.awt.Dimension(100, 100));
 

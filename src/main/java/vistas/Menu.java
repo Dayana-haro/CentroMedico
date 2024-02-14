@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package vistas;
+
 import java.awt.Component;
 
 /**
@@ -63,6 +64,11 @@ public class Menu extends javax.swing.JFrame {
         jMenuBar2.add(jMenu1);
 
         jMenu2.setText("Edit");
+        jMenu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu2ActionPerformed(evt);
+            }
+        });
         jMenuBar2.add(jMenu2);
 
         setJMenuBar(jMenuBar2);
@@ -87,10 +93,19 @@ public class Menu extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-        VistaPersona pc=new VistaPersona();
-        escritorio.add(pc);
-        pc.show();
+//        VistaPersona pc=new VistaPersona();
+//        escritorio.add(pc);
+//        pc.show();
+        Inicio ventana = new Inicio();
+        escritorio.add(ventana);
+        ventana.show();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
+        // TODO add your handling code here:
+
+
+    }//GEN-LAST:event_jMenu2ActionPerformed
 
     /**
      * @param args the command line arguments
