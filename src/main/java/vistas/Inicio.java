@@ -70,14 +70,14 @@ public class Inicio extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(96, 96, 96)
+                        .addGap(112, 112, 112)
                         .addComponent(lblLogoSistem, javax.swing.GroupLayout.PREFERRED_SIZE, 806, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(155, 155, 155)
                         .addComponent(btnUserP)
                         .addGap(58, 58, 58)
                         .addComponent(btnUserM)))
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -97,7 +97,7 @@ public class Inicio extends javax.swing.JInternalFrame {
     private void btnUserPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUserPActionPerformed
         // TODO add your handling code here:
         loginPaciente Paciente = new loginPaciente();
-        
+
     }//GEN-LAST:event_btnUserPActionPerformed
 
     private void btnUserMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUserMActionPerformed
