@@ -7,6 +7,7 @@ vistas\PersonaView$4.class
 vistas\PersonaView$7.class
 vistas\IngresarDatosPaciente$2.class
 vistas\GestionPersona$1.class
+vistas\PantallaInicio$3.class
 vistas\IngresarDatosPaciente.class
 DIU\modelo\PersonaModelo.class
 vistas\ConsultarMedicos$2.class
@@ -68,6 +69,7 @@ vistas\VistaPersona$4.class
 vistas\VistaPersona$7.class
 vistas\menuMedico$5.class
 vistas\Menu$3.class
+vistas\PantallaInicio$2.class
 vistas\FondoPanel.class
 vistas\PersonaView$5.class
 vistas\GestionPersona$11.class
@@ -78,6 +80,7 @@ vistas\ConsultarCitasMedicas.class
 vistas\menuPaciente$1.class
 vistas\InicioSesion$1.class
 vistas\ReagendarCitaMedica$1.class
+vistas\PantallaInicio.class
 vistas\AgregarUserMedico.class
 vistas\IngresarDatosPaciente$1.class
 vistas\Inicio$1.class
@@ -88,6 +91,7 @@ vistas\AgendarCitaMedica$2.class
 vistas\Menu$2.class
 vistas\PersonaView$9.class
 vistas\menuAdministrador$1.class
+vistas\PantallaInicio$1.class
 controlador\pruebaBDD.class
 vistas\GestionPersona$6.class
 vistas\ConsultarCitaMedica$1.class
